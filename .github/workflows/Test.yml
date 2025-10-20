@@ -1,0 +1,18 @@
+name: MacOS Test 
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  osx-aarch64:
+    name: MacOS (aarch64)
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: PIP Install
+        run: |
+          python3 --version
+          python3 -m pip install duckdb
