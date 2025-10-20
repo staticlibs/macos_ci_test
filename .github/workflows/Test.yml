@@ -14,5 +14,6 @@ jobs:
 
       - name: PIP Install
         run: |
-          python3 --version
-          python3 -m pip install duckdb
+          python3 -m venv ./venv1
+          ./venv1/bin/python3 --version
+          ./venv1/bin/python3 -m pip install duckdb
